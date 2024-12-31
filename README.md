@@ -12,10 +12,12 @@ return {
   url = "User/Repo",
   dependencies = {
     "DependencyOne",
-    "DependencyTwo"
+    "DependencyTwo",
+    "etc"
   },
   config = function()
     // Code
   end
 }
 ```
+- In `init.lua` add the file name to `module_names`
