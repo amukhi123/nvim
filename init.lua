@@ -15,7 +15,7 @@ local plugin_directory = "C:\\Users\\Aqil\\AppData\\Local\\nvim"
 
 package.path = package.path .. ";" .. plugin_directory .. "/?.lua"
 
-local module_names = {"bufferline", "nvim-cmp", "nvim-lspconfig", "mason", "mason-lspconfig", "mason-nvim-dap", "nord", "nvim-dap-ui", "nvim-dap", "nvim-tree", "telescope", "toggleterm"}
+local module_names = {"bufferline", "diffview", "mason", "mason-lspconfig", "mason-nvim-dap", "nord", "nvim-cmp", "nvim-dap-ui", "nvim-dap", "nvim-lspconfig", "nvim-tree", "telescope", "toggleterm"}
 
 vim.call("plug#begin")
 
@@ -42,8 +42,8 @@ vim.cmd("colorscheme nord")
 local powershell_options = {
     shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
     shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
-    shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
-    shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+    shellredir = "-NoNewWindow -Wait",
+    shellpipe = "2>&1",
     shellquote = "",
     shellxquote = ""
 }
@@ -51,3 +51,5 @@ local powershell_options = {
 for option, value in pairs(powershell_options) do
     vim.opt[option] = value
 end
+
+vim.keymap.set("n", "<C-k>", ":silent !explorer %:p:h<CR>", {silent = true})

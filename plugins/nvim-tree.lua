@@ -9,6 +9,7 @@ return {
 
         require("nvim-tree").setup()
 
-        vim.keymap.set("n", "<C-l>", ":NvimTreeToggle<CR>", {silent = true})
+        vim.keymap.set("n", "<C-l>", ":NvimTreeOpen<CR>", {silent = true})
+        vim.keymap.set("n", "<C-A-l>", ":NvimTreeClose<CR>", {silent = true})
     end
 }

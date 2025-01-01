@@ -21,3 +21,7 @@ return {
 }
 ```
 - In `init.lua` add the file name to `module_names`
+# Troubleshooting
+## Executing PowerShell Scripts Opens Notepad
+- Open a PowerShell script and set the default program to open it to PowerShell
+    - This is located in `%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe`
