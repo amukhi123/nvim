@@ -15,13 +15,30 @@ return {
                     vim.fn["vsnip#anonymous"](args.body)
                 end,
             },
-            mapping = cmp.mapping.preset.insert({
-                ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-                ["<C-f>"] = cmp.mapping.scroll_docs(4),
-                ["<C-o>"] = cmp.mapping.complete(),
-                ["<C-e>"] = cmp.mapping.abort(),
-                ["<CR>"] = cmp.mapping.confirm({select = true})
-            }),
+            mapping = {
+                ["<C-b>"] = function()
+                    if cmp.visible() then
+                        cmp.close()
+                    else
+                        cmp.complete()
+                    end
+                end,
+                ["<Tab>"] = function()
+                    if cmp.visible() then
+                        cmp.select_next_item()
+                    end
+                end,
+                ["<S-Tab>"] = function()
+                    if cmp.visible() then
+                        cmp.select_prev_item()
+                    end
+                end,
+                ["<CR>"] = function()
+                    if cmp.visible() then
+                        cmp.confirm({select = true})
+                    end
+                end
+            },
             sources = cmp.config.sources({
                 {name = "nvim_lsp"},
                 {name = "vsnip"}

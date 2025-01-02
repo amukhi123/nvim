@@ -20,7 +20,7 @@ return {
   end
 }
 ```
-- In `init.lua` add the file name to `module_names`
+- In `init.lua` add the file name to `module_install_order` and `module_config_order`
 # Troubleshooting
 ## Executing PowerShell Scripts Opens Notepad
 - Open a PowerShell script and set the default program to open it to PowerShell
