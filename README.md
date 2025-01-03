@@ -1,5 +1,7 @@
 # Description
 This is my custom config for neovim.
+
+![neovim](assets/neovim.PNG)
 # Requirements
 - In order to use [minimap.vim](https://github.com/wfxr/minimap.vim) you need to install [code minimap](https://github.com/wfxr/code-minimap) and add the executable to your path
 # Setup
