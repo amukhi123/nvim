@@ -4,7 +4,7 @@ return {
     },
     config = function()
         require("mason").setup({
-            ensure_installed = {"clangd"}
+            ensure_installed = {"clangd", "lua_ls"}
         })
     end
 }

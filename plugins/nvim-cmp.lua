@@ -23,17 +23,17 @@ return {
                         cmp.complete()
                     end
                 end,
-                ["<Tab>"] = function()
+                ["<Down>"] = function()
                     if cmp.visible() then
                         cmp.select_next_item()
                     end
                 end,
-                ["<S-Tab>"] = function()
+                ["<Up>"] = function()
                     if cmp.visible() then
                         cmp.select_prev_item()
                     end
                 end,
-                ["<CR>"] = function()
+                ["<Right>"] = function()
                     if cmp.visible() then
                         cmp.confirm({select = true})
                     end

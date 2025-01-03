@@ -5,6 +5,8 @@ return {
     config = function()
         vim.keymap.set("n", "<F9>", ":DapToggleBreakpoint<CR>", {silent = true})
         vim.keymap.set("n", "<F5>", ":DapContinue<CR>", {silent = true})
+        vim.keymap.set("n", "<F10>", ":DapStepOver<CR>", {silent = true})
+        vim.keymap.set("n", "<F11>", ":DapStepInto<CR>", {silent = true})
 
         vim.fn.sign_define('DapBreakpoint', {text='🔴', texthl='', linehl='', numhl=''})
     end

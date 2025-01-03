@@ -5,11 +5,35 @@ return {
         "mfussenegger/nvim-dap"
     },
     config = function()
-        require("dapui").setup()
+        local dapui = require("dapui")
+
+        dapui.setup({
+            layouts = {
+                {
+                    elements = {
+                        {
+                            id = "scopes",
+                            size = 0.25
+                        },
+                        { 
+                            id = "watches", 
+                            size = 0.25 
+                        }
+                    },
+                    size = 40,
+                    position = "left"
+                },
+                {
+                    elements = {
+                        "console",
+                    },
+                    size = 40,
+                    position = "bottom"
+                },
+            }
+        })
 
         local dap = require("dap")
-        
-        local dapui = require("dapui")
 
         dap.listeners.before.attach.dapui_config = function()
             dapui.open()
@@ -26,6 +50,5 @@ return {
         dap.listeners.before.event_exited.dapui_config = function()
             dapui.close()
         end
-
     end
 }

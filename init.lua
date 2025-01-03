@@ -15,7 +15,7 @@ local plugin_directory = "C:\\Users\\Aqil\\AppData\\Local\\nvim"
 
 package.path = package.path .. ";" .. plugin_directory .. "/?.lua"
 
-local module_install_order = {"bufferline", "diffview", "mason", "nvim-lspconfig", "mason-lspconfig", "nord", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui", "nvim-tree", "telescope", "toggleterm"}
+local module_install_order = {"bufferline", "diffview", "markview", "mason", "nvim-lspconfig", "mason-lspconfig", "nord", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui", "nvim-tree", "telescope", "toggleterm"}
 
 vim.call("plug#begin")
 
@@ -32,7 +32,7 @@ end
 
 vim.call("plug#end")
 
-local module_config_order = {"bufferline", "diffview", "mason", "mason-lspconfig", "nvim-lspconfig", "mason-nvim-dap", "nord", "nvim-cmp", "nvim-dap-ui", "nvim-dap", "nvim-tree", "telescope", "toggleterm"}
+local module_config_order = {"bufferline", "diffview", "markview", "mason", "mason-lspconfig", "nvim-lspconfig", "mason-nvim-dap", "nord", "nvim-cmp", "nvim-dap-ui", "nvim-dap", "nvim-tree", "telescope", "toggleterm"}
 
 for _, value in ipairs(module_config_order) do
     
