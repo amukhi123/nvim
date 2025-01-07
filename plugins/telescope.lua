@@ -10,6 +10,9 @@ return {
                     horizontal = {
                         preview_cutoff = 0
                     }
+                },
+                path_display = {
+                    "truncate"
                 }
             }
         })
