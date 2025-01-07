@@ -4,7 +4,10 @@ return {
     },
     config = function()
         require("mason").setup({
-            ensure_installed = {"clangd", "lua_ls"}
+            ensure_installed = {"clangd", "lua_ls"},
+            ui = {
+                border = "rounded"
+            }
         })
     end
 }

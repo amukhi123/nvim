@@ -11,7 +11,9 @@ vim.opt.clipboard:append("unnamedplus")
 vim.opt.mouse = "a"
 
 -- Mofify this based on where your nvim directory is
-local plugin_directory = "C:\\Users\\Aqil\\AppData\\Local\\nvim"
+local username = os.getenv("USERPROFILE")
+
+local plugin_directory = username .. "\\AppData\\Local\\nvim"
 
 package.path = package.path .. ";" .. plugin_directory .. "/?.lua"
 
