@@ -3,5 +3,8 @@ return {
     dependencies = {
     },
     config = function()
+        require("markview").setup({
+            initial_state = false
+        })
     end
 }

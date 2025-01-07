@@ -4,7 +4,9 @@ return {
     },
     config = function()
         require("nvim-treesitter.configs").setup({
-            ensure_installed = {"cpp", "lua"},
+            ensure_installed = {
+                "cpp", "lua", "markdown", "markdown_inline", "html"
+            },
             highlight = {
                 enable = true
             }
