@@ -2,8 +2,6 @@
 This is my custom config for neovim.
 
 ![neovim](assets/neovim.PNG)
-# Requirements
-- In order to use [minimap.vim](https://github.com/wfxr/minimap.vim) you need to install [code minimap](https://github.com/wfxr/code-minimap) and add the executable to your path
 # Setup
 - In neovim run `PlugInstall` to install the plugins
 - Make sure to change the `plugin_directory` variable in `init.lua` to point to where your `init.lua` is
@@ -34,13 +32,13 @@ return {
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 - [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim)
-- [minimap.vim](https://github.com/wfxr/minimap.vim)
 - [nord.nvim](https://github.com/shaunsingh/nord.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
+- [nvim-scrollview](https://github.com/dstein64/nvim-scrollview)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
