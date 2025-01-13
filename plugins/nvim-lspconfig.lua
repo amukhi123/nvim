@@ -3,9 +3,12 @@ return {
     dependencies = {
     },
     config = function()
+        local lsp_config = require("lspconfig")
+
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        require("lspconfig").clangd.setup ({
+        lsp_config.clangd.setup ({
+            autostart = false,
             capabilities = capabilities
         })
 

@@ -17,7 +17,7 @@ local plugin_directory = username .. "\\AppData\\Local\\nvim"
 
 package.path = package.path .. ";" .. plugin_directory .. "/?.lua"
 
-local module_install_order = {"bufferline", "diffview", "markview", "mason", "nvim-lspconfig", "mason-lspconfig", "nord", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
+local module_install_order = {"bufferline", "diffview", "markview", "mason", "nvim-lspconfig", "mason-lspconfig", "neogit", "nord", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
 
 vim.call("plug#begin")
 
@@ -34,7 +34,7 @@ end
 
 vim.call("plug#end")
 
-local module_config_order = {"bufferline", "diffview", "markview", "mason", "mason-lspconfig", "nvim-lspconfig", "mason-nvim-dap", "nord", "nvim-cmp", "nvim-dap-ui", "nvim-dap", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
+local module_config_order = {"bufferline", "diffview", "markview", "mason", "mason-lspconfig", "neogit", "nvim-lspconfig", "mason-nvim-dap", "nord", "nvim-cmp", "nvim-dap-ui", "nvim-dap", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
 
 for _, value in ipairs(module_config_order) do
     
