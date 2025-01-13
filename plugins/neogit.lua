@@ -13,6 +13,5 @@ return {
         })
 
         vim.keymap.set("n", "<C-n>", ":Neogit<CR>", {silent = true})
-        vim.keymap.set("n", "<C-n>c", ":NeogitCommit<CR>", {silent = true})
     end
 }

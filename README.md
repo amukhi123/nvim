@@ -32,6 +32,7 @@ return {
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 - [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim)
+- [neogit](https://github.com/NeogitOrg/neogit)
 - [nord.nvim](https://github.com/shaunsingh/nord.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
