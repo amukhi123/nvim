@@ -12,6 +12,16 @@ return {
             capabilities = capabilities
         })
 
+        lsp_config.lua_ls.setup ({
+            autostart = false,
+            capabilities = capabilities
+        })
+
+        lsp_config.pylsp.setup ({
+            autostart = false,
+            capabilities = capabilities
+        })
+
         vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, {silent = true})
         vim.keymap.set("n", "<C-Space>", vim.lsp.buf.hover, {silent = true})
     end
