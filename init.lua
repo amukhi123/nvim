@@ -34,6 +34,8 @@ end
 
 vim.call("plug#end")
 
+vim.cmd("colorscheme nord")
+
 local module_config_order = {"bufferline", "diffview", "markview", "mason", "mason-lspconfig", "neogit", "nvim-lspconfig", "mason-nvim-dap", "nord", "nvim-cmp", "nvim-dap-ui", "nvim-dap", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
 
 for _, value in ipairs(module_config_order) do
@@ -42,8 +44,6 @@ for _, value in ipairs(module_config_order) do
 
     module.config()
 end
-
-vim.cmd("colorscheme nord")
 
 local powershell_options = {
     shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",

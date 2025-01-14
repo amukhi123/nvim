@@ -5,8 +5,9 @@ return {
     config = function()
         require("nvim-treesitter.configs").setup({
             ensure_installed = {
-                "cpp", "lua", "markdown", "markdown_inline", "html"
+                "cpp", "html", "lua", "markdown", "markdown_inline", "python"
             },
+            auto_install = true,
             highlight = {
                 enable = true
             }
