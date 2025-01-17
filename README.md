@@ -22,7 +22,7 @@ return {
   end
 }
 ```
-- In `init.lua` add the file name to `module_install_order` and `module_config_order`
+- In `init.lua` add the file name to `plugin_install_order` and `plugin_config_order`
 # Plugins
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -47,6 +47,9 @@ return {
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [vim-vsnip](https://github.com/hrsh7th/vim-vsnip)
+# Commands
+Commands add certain plugins to the base configuration like debugging and auto-complete. This was added so that the base configuration is as lightweight and fast as possible. All commands can be passed in by using `--cmd="let g:flag_name=1", for example, `nvim -c "nvim --cmd "let g:ide=1" .\init.lua".
+- `g:ide`: Adds `mason`, `mason-lspconfig`, `mason-nvim-dap`, `neogit`, `nvim-cmp`, `nvim-dap`, `nvim-dap-ui` and `nvim-lspconfig`
 # Troubleshooting
 ## Executing PowerShell Scripts Opens Notepad
 - Open a PowerShell script and set the default program to open it to PowerShell

@@ -17,11 +17,19 @@ local plugin_directory = username .. "\\AppData\\Local\\nvim"
 
 package.path = package.path .. ";" .. plugin_directory .. "/?.lua"
 
-local module_install_order = {"bufferline", "diffview", "markview", "mason", "nvim-lspconfig", "mason-lspconfig", "neogit", "nord", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
+local plugin_install_order = {"bufferline", "diffview", "nord", "markview", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
+
+if vim.g.ide ~= nil then
+    local ide_plugins = {"mason", "nvim-lspconfig", "mason-lspconfig", "neogit", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui"}
+
+    for _, value in ipairs(ide_plugins) do
+        table.insert(plugin_install_order, value) 
+    end
+end
 
 vim.call("plug#begin")
 
-for _, value in ipairs(module_install_order) do
+for _, value in ipairs(plugin_install_order) do
 
     local module = require("plugins." .. value)
 
@@ -36,9 +44,17 @@ vim.call("plug#end")
 
 vim.cmd("colorscheme nord")
 
-local module_config_order = {"bufferline", "diffview", "markview", "mason", "mason-lspconfig", "neogit", "nvim-lspconfig", "mason-nvim-dap", "nord", "nvim-cmp", "nvim-dap-ui", "nvim-dap", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
+local plugin_config_order = {"bufferline", "diffview", "nord", "markview", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
 
-for _, value in ipairs(module_config_order) do
+if vim.g.ide ~= nil then
+    local ide_plugins = {"mason", "nvim-lspconfig", "mason-lspconfig", "neogit", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui"}
+
+    for _, value in ipairs(ide_plugins) do
+       table.insert(plugin_config_order, value) 
+    end
+end
+
+for _, value in ipairs(plugin_config_order) do
     
     local module = require("plugins." .. value)
 
