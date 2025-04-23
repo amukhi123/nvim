@@ -20,7 +20,7 @@ package.path = package.path .. ";" .. plugin_directory .. "/?.lua"
 local plugin_install_order = {"bufferline", "diffview", "nord", "markview", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
 
 if vim.g.ide ~= nil then
-    local ide_plugins = {"mason", "nvim-lspconfig", "mason-lspconfig", "neogit", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui"}
+    local ide_plugins = {"fugitive", "mason", "nvim-lspconfig", "mason-lspconfig", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui"}
 
     for _, value in ipairs(ide_plugins) do
         table.insert(plugin_install_order, value) 
@@ -47,7 +47,7 @@ vim.cmd("colorscheme nord")
 local plugin_config_order = {"bufferline", "diffview", "nord", "markview", "nvim-tree", "nvim-treesitter", "scrollview", "telescope", "toggleterm"}
 
 if vim.g.ide ~= nil then
-    local ide_plugins = {"mason", "nvim-lspconfig", "mason-lspconfig", "neogit", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui"}
+    local ide_plugins = {"fugitive", "mason", "nvim-lspconfig", "mason-lspconfig", "nvim-cmp", "nvim-dap", "mason-nvim-dap", "nvim-dap-ui"}
 
     for _, value in ipairs(ide_plugins) do
        table.insert(plugin_config_order, value) 

@@ -28,11 +28,11 @@ return {
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 - [cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
+- [vim fugitive](https://github.com/tpope/vim-fugitive)
 - [markview.nvim](https://github.com/OXY2DEV/markview.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 - [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim)
-- [neogit](https://github.com/NeogitOrg/neogit)
 - [nord.nvim](https://github.com/shaunsingh/nord.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
@@ -48,8 +48,11 @@ return {
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [vim-vsnip](https://github.com/hrsh7th/vim-vsnip)
 # Commands
-Commands add certain plugins to the base configuration like debugging and auto-complete. This was added so that the base configuration is as lightweight and fast as possible. All commands can be passed in by using `--cmd="let g:flag_name=1", for example, `nvim -c "nvim --cmd "let g:ide=1" .\init.lua".
-- `g:ide`: Adds `mason`, `mason-lspconfig`, `mason-nvim-dap`, `neogit`, `nvim-cmp`, `nvim-dap`, `nvim-dap-ui` and `nvim-lspconfig`
+Commands add certain plugins to the base configuration like debugging and auto-complete. This was added so that the base configuration is as lightweight and fast as possible. All commands can be passed in by using `--cmd="let g:flag_name=1"`, for example, `nvim -c "nvim --cmd "let g:ide=1" `
+- `g:ide`: Adds `fugitive`, `mason`, `mason-lspconfig`, `mason-nvim-dap`, `nvim-cmp`, `nvim-dap`, `nvim-dap-ui` and `nvim-lspconfig`
+# Usage
+## Markdown
+- Using `:Markview` will enable and disable the markdown preview
 # Troubleshooting
 ## Executing PowerShell Scripts Opens Notepad
 - Open a PowerShell script and set the default program to open it to PowerShell
