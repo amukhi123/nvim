@@ -10,6 +10,8 @@ vim.opt.clipboard:append("unnamedplus")
 
 vim.opt.mouse = "a"
 
+vim.g.mapleader = " "
+
 -- Mofify this based on where your nvim directory is
 local username = os.getenv("USERPROFILE")
 
@@ -75,3 +77,4 @@ for option, value in pairs(powershell_options) do
 end
 
 vim.keymap.set("n", "<C-k>", ":silent !explorer %:p:h<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>q", ":bp | sp | bn | bd<CR>", {silent = true})
